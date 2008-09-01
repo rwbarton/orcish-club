@@ -1,0 +1,10 @@
+*.aux
+*.dvi
+*.log
+*.pdf
+*.ps
+_*.tex
+*.toc
+
+*.hi
+*.o
