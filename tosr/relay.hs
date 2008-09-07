@@ -216,6 +216,11 @@ twoUpRelay :: Relay ()
 twoUpRelay = return ()          -- XXX
 
 
+compareLength [] [] = EQ
+compareLength [] _ = LT
+compareLength _ [] = GT
+compareLength (_:xs) (_:ys) = compareLength xs ys
+
 main :: IO ()
 main = do
   args <- getArgs
@@ -235,7 +240,7 @@ main = do
                      when (a /= b) $ putStrLn $ "Wrong, should be " ++ b
                      putStr $ (show $ skipSignoff $ succ b0) ++ " -- "
                 | (a, b0) <- zip guesses bids, let b = show b0 ]
-      case length guesses `compare` length bids of
+      case compareLength guesses bids of
         GT -> putStrLn "Don't know where you're going with that last bid..."
         EQ -> putStrLn "You win!"
         LT -> putStrLn "You passed a relay ask..."
