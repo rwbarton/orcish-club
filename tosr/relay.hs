@@ -230,7 +230,7 @@ main = do
       putStrLn $ "You hold: " ++ show hand
       putStr "1C -- "
       let (_, _, bids) = runRelay tosr hand
-      guesses <- takeWhile (/= "") . lines <$> getContents
+      guesses <- takeWhile (/= "") . lines . map toUpper <$> getContents
       sequence_ [ do
                      when (a /= b) $ putStrLn $ "Wrong, should be " ++ b
                      putStr $ (show $ skipSignoff $ succ b0) ++ " -- "
