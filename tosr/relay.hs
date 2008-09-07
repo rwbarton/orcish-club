@@ -54,7 +54,7 @@ skipSignoff :: Bid -> Bid
 skipSignoff (Bid 3 NT) = Bid 4c
 skipSignoff (Bid 4 (Suit D)) = Bid 4h
 skipSignoff x = x
-                        
+
 bid :: Int -> Strain -> Relay ()
 bid l str = do
   let b = Bid l str
@@ -124,7 +124,7 @@ normalRelay = do
       let [longSuit] = suitsOfLength hand 4
       when (longSuit == H || longSuit == S) $ bid 2d
       bid 2s
-      if longSuit == C || longSuit == H then bid 3c else bid 3d
+      if longSuit == C || longSuit == H then bid 3c else zoom 3d
     else case length (filter (>= 4) sh) of
     1 -> do                     -- one-suiter
       let [longSuit] = suitsOfAtLeast hand 5
