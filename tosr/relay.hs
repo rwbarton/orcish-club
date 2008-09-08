@@ -43,12 +43,14 @@ instance Show Bid where
     Suit S -> "S"
     NT -> "N"
 
-newtype Relay a = Relay (RWS Hand [Bid] Bid a)
+data RelayState = RelayState { relayAsk :: Bid,
+                               extraSteps :: Int }
+newtype Relay a = Relay (RWS Hand [Bid] RelayState a)
                 deriving (Functor, Monad, MonadReader Hand,
-                          MonadWriter [Bid], MonadState Bid)
+                          MonadWriter [Bid], MonadState RelayState)
 
-runRelay :: Relay a -> Hand -> (a, Bid, [Bid])
-runRelay (Relay r) h = runRWS r h (Bid 1c)
+runRelay :: Relay a -> Hand -> (a, RelayState, [Bid])
+runRelay (Relay r) h = runRWS r h $ RelayState { relayAsk = Bid 1c, extraSteps = 0 }
 
 skipSignoff :: Bid -> Bid
 skipSignoff (Bid 3 NT) = Bid 4c
@@ -57,26 +59,32 @@ skipSignoff x = x
 
 bid :: Int -> Strain -> Relay ()
 bid l str = do
-  let b = Bid l str
+  extra <- extraSteps <$> get
+  let b = (iterate succ $ Bid l str) !! extra
   tell [b]
-  put $ skipSignoff $ succ b
+  let b' = succ b
+      b'' = skipSignoff b'
+  put $ RelayState { relayAsk = b'', extraSteps = extra + if b'' /= b' then 1 else 0 }
 
 zoom :: Int -> Strain -> Relay ()
 zoom l str = do
-  let b = Bid l str
-  put $ pred b
+  extra <- extraSteps <$> get
+  let b = (iterate succ $ Bid l str) !! extra
+  put $ RelayState { relayAsk = pred b, extraSteps = extra }
 
 steps :: Int -> Relay ()
 steps n = do
-  r <- get
-  let Bid l str = (iterate succ r) !! (n + 1)
-  bid l str
+  r <- relayAsk <$> get
+  let b = (iterate succ r) !! (n + 1)
+      b' = skipSignoff $ succ b
+  tell [b]
+  modify $ \x -> x { relayAsk = b' }
 
 zoomSteps :: Int -> Relay ()
 zoomSteps n = do
-  r <- get
-  let Bid l str = (iterate succ r) !! (n + 1)
-  zoom l str
+  r <- relayAsk <$> get
+  let b = (iterate succ r) !! (n + 1)
+  modify $ \x -> x { relayAsk = pred b }
 
 
 
@@ -85,7 +93,7 @@ tosr :: Relay ()
 tosr = do
   hand <- ask
   if hcp hand >= 9 && ak hand >= 2
-    then normalRelay
+    then normalRelay normalRangeControls
     else do
     bid 1d
     if hcp hand >= 5
@@ -98,8 +106,8 @@ transfer H = bid 1nt
 transfer D = bid 2c
 transfer C = bid 2d
 
-normalRelay :: Relay ()
-normalRelay = do
+normalRelay :: Relay () -> Relay ()
+normalRelay rangeControls = do
   hand <- ask
   let sh = reverse $ shape hand
   if 2 <= minimum sh && maximum sh <= 4
@@ -188,19 +196,24 @@ normalRelay = do
         [4,5,4] -> steps 2
         [5,4,4] -> zoomSteps 3
   -- range & controls
-  let strong = hcp hand >= 13 && ak hand >= 3 || ak hand >= 6 -- 3 Aces counts as strong
-  if not strong
-    then steps 0 >> steps (ak hand - 2)
-    else zoomSteps 1 >> steps (ak hand - 3)
+  rangeControls
   -- denial cue bidding
   let go [] = return ()
       go xs = do
-        b <- get
+        b <- relayAsk <$> get
         when (b <= Bid 5 NT) $ do
           let (f, False:xs') = span id xs
           steps (length f)
           go xs'
   go $ spiralScan hand ++ [False]
+
+normalRangeControls :: Relay ()
+normalRangeControls = do
+  hand <- ask
+  let strong = hcp hand >= 13 && ak hand >= 3 || ak hand >= 6 -- 3 Aces counts as strong
+  if not strong
+    then steps 0 >> steps (ak hand - 2)
+    else zoomSteps 1 >> steps (ak hand - 3)
 
 spiralScan :: Hand -> [Bool]
 spiralScan hand@(Hand h) = concat . transpose . map oneSuit $ suitOrder
@@ -213,8 +226,14 @@ spiralScan hand@(Hand h) = concat . transpose . map oneSuit $ suitOrder
                 numAKQ = length $ intersect [A, K, Q] ranks
 
 twoUpRelay :: Relay ()
-twoUpRelay = return ()          -- XXX
+twoUpRelay = do
+  modify $ \x -> x { extraSteps = 2 }
+  normalRelay twoUpRangeControls
 
+twoUpRangeControls :: Relay ()
+twoUpRangeControls = do
+  hand <- ask
+  steps $ ak hand
 
 compareLength [] [] = EQ
 compareLength [] _ = LT
