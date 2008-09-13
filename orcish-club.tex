@@ -7,11 +7,13 @@
 \newcommand{\bal}{\textsc{bal}}
 \newcommand{\ak}{\textsc{ak}}
 \newcommand{\gf}{\textsc{gf}}
+\newcommand{\nf}{\textsc{nf}}
 \renewcommand{\c}{\ensuremath{\clubsuit}}
 \renewcommand{\d}{\ensuremath{\diamondsuit}}
 \newcommand{\h}{\ensuremath{\heartsuit}}
 \newcommand{\s}{\ensuremath{\spadesuit}}
 \newcommand{\nt}{\textsc{nt}}
+\newcommand{\p}{\textsc{pass}}
 \newcommand{\x}{\textsc{x}}
 \newcommand{\y}{\textsc{y}}
 \newcommand{\+}{\ensuremath{^+}}
@@ -20,6 +22,7 @@
 \begin{document}
 \maketitle
 \tableofcontents
+\listoffigures
 
 \chapter{Opening bid structure}
 
@@ -143,10 +146,90 @@ to play.
 
 \chapter{The 2\d\ opening}
 
-We modify the 2\nt\ relay in one way: when responder has a maximum
-hand with (43) in the majors, he bids the suit above his major, so
-that he does not declare a contract in that major (with his exact
-shape and strength known).
+The 2\d\ opening shows 10--14 \hcp\ and ``approximately 4415'': 3415,
+4315, 4405 or 4414.
+
+Responding hands not interested in game pass or bid a new suit
+cheaply.  Game bids are to play and jump shifts (including 2\d--4\d)
+are natural slam tries.  3\d\ is a (rare) natural invite.  The
+remaining hands start with a 2\nt\ relay ask.
+
+Invitational hands without a 5-card major, 3 clubs, or long diamonds
+are problematic.  For example, if your shape is 3352, you know your
+side has no 8-card fit and you don't even have a way to reach a
+guaranteed 7-card fit; yet you cannot bid 2\nt\ as a natural
+invitation.  It is probably best to just bid 3\nt\ even with as few as
+12 points; you don't need good odds to bid games when you might not
+have been making a partscore either.  With one 4-card major, however,
+you can either bid it at the 2 level as a weak invite (opener can
+continue with a maximum, 4-card support, and a good 5-card club suit)
+or, with a stronger invite, bid 2\nt\ and then 3 of your major over a
+3\c\ response.  This usually suggests a 5-card suit, but opener will
+not continue without 4-card support and a good minimum.  With 44 in
+the majors, you can bid 2\nt\ and continue with 3\d\ over 3\c,
+provided you are willing to play in game with a double fit in the
+majors.
+
+We have modified the 2\nt\ relay from Revision club in one way: when
+opener has a maximum hand with (43) in the majors, he bids the suit
+above his major, so that he does not declare a contract in that major
+(with his exact shape and strength known).
+
+\begin{figure}[ht]
+\begin{tabular}{llllll}
+2\d
+&2\h &&&&to play.  But opener might continue with a great hand for \h.\\
+&    &2\s &&&4405 (\nf)\\
+&    &2\nt&&&3415 (\nf)\\
+&2\s &&&&to play.  But opener might continue with a great hand for \s.\\
+&    &2\nt&&&4315 (\nf)\\
+&    &3\c &&&4405 (\nf)\\
+&2\nt&&&&invitational+ relay ask\\
+&    &3\c &&&any minimum (\nf)\\
+&    &    &3\d &&further relay.  Promises a 4-card major.\\
+&    &    &    &3\h &3415 (\nf). 4\d\ is a slam try in \h.\\
+&    &    &    &3\s &4315 (\nf). 4\d\ is a slam try in \s.\\
+&    &    &    &3\nt&4414. 4\h/\s\ to play, 4\c/\d\ slam try in \h/\s, step is positive.\\
+&    &    &    &4\c &4405. 4\d/\h\ transfer to \h/\s.\\
+&    &    &3\h &&natural, \nf, usually 5.\\
+&    &    &3\s &&natural, \nf, usually 5.\\
+&    &    &3\nt&&to play\\
+&    &    &4\c &&invitational to 5\c\\
+&    &    &4\nt&&invitational to 6\nt\\
+&    &3\d &&&\gf, 4414.  A rebid below game is a natural slam try.\\
+&    &3\h &&&\gf, 4405.  4\d\ is a slam try in \h.\\
+&    &3\s &&&\gf, 3415.  4\d\ is a slam try in \h.\\
+&    &3\nt&&&\gf, 4315.  4\d\ is a slam try in \s.\\
+&3\c &&&&to play\\
+&3\d &&&&natural invite\\
+&3\h &&&&slam try in \h\\
+&    &3\s &&&minimum, 4315\\
+&    &    &3\nt&&to play\\
+&    &    &4\c &&sets \c\ as trump\\
+&    &    &4\d &&further try\\
+&    &    &4\h &&to play\\
+&    &3\nt&&&maximum, 4315.  \nf.  Continuations as above.\\
+&    &4\c &&&4414 or 3415, \c\ cuebid\\
+&    &4\d &&&4405\\
+&    &4\h &&&4414 or 3415, no \c\ cuebid\\
+&3\s &&&&slam try in \s\\
+&    &3\nt&&&3415 (\nf)\\
+&    &    &4\c &&sets \c\ as trump\\
+&    &    &4\d &&\c\ cuebid\\
+&    &    &4\h &&\h\ cuebid\\
+&    &    &4\s &&to play\\
+&    &4\c &&&4414 or 4315, \c\ cuebid\\
+&    &4\d &&&4405\\
+&    &4\h &&&4414 or 4315, \h\ cuebid, no \c\ cuebid\\
+&    &4\s &&&4414 or 4315, nothing to cuebid\\
+&3\nt&&&&to play\\
+&4\c &&&&slam try in \c.  Usual principles; 4\d\ shows a diamond void.\\
+&4\d &&&&slam try in \d.  Usual principles, except:\\
+&    &4\h &&&shows a (singleton) diamond honor (Jack or better)\\
+&\hbox to 0pt{4\h, 4\s, 5\c, 5\d\hss}&&&&to play
+\end{tabular}
+\caption{Auctions after a 2\d\ opener.}
+\end{figure}
 
 \chapter{The 2\nt\ opening}
 
