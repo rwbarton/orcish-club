@@ -1,0 +1,208 @@
+\documentclass{amsart}
+\usepackage{fullpage}
+
+\newcommand{\hcp}{\textsc{hcp}}
+\newcommand{\bal}{\textsc{bal}}
+\newcommand{\ak}{\textsc{ak}}
+\newcommand{\gf}{\textsc{gf}}
+\renewcommand{\c}{\ensuremath{\clubsuit}}
+\renewcommand{\d}{\ensuremath{\diamondsuit}}
+\newcommand{\h}{\ensuremath{\heartsuit}}
+\newcommand{\s}{\ensuremath{\spadesuit}}
+\newcommand{\nt}{\textsc{nt}}
+\newcommand{\+}{\ensuremath{^+}}
+\newcommand{\zoom}{\underline}
+
+\begin{document}
+
+\section*{A two-page guide to Transfer-Oriented Symmetric Relay}
+
+\subsection*{Basic idea}
+This system covers the sequences 1\c\ (any 16\+ \hcp) -- 1\h\+ (\gf).
+(A \gf\ response requires 2 \ak; see ``Controls.'')  The 1\c\ opener
+is now the \emph{relayer} or \emph{asker} and will continue making the
+cheapest available bid (with two exceptions, see below) until able to
+place the contract.  The other hand is called the \emph{relay
+  responder} and makes a sequence of descriptive bids (separated by
+semicolons here).  Ideally, the relayer will be the declarer and the
+defenders will have no information about the closed hand; hence
+``transfer-oriented.''
+
+\subsection*{Very Important Exceptions (signoffs)}
+If the relayer bids 3\nt, that is always to play.  A bid of 4\d\ by
+the relayer is the \emph{end signal}: responder bids 4\h\ whereupon
+the relayer places the contract.  But with a very good hand responder
+can bid over 3\nt\ or 4\d\ showing controls, starting with 4\c/4\s\ =
+4 \ak.  (See ``Controls.'')  When the next step is 3\nt\ or 4\d,
+relayer can continue relays by bidding one step higher instead.
+
+\subsection*{Responder's bids}
+The responding hand is described in four stages: shape, range,
+controls, and denial cuebidding (location of specific honors).
+Sometimes a single bid belongs to two or more stages, thanks to a
+technique called \emph{zooming}: when responder would make the highest
+possible bid at the end of one stage, responder also begins the next
+stage as though the relayer had made a relay ask one step below that
+bid.  For example, the sequence 1\s; 3\d\ just shows 3424 shape, but
+1\s; 3\h\ shows 4243 shape and a minimum, 1\s; 3\s\ shows 4243 shape
+and a maximum with 3 \ak, etc., because there is no shape assigned to
+1\s; 3\s.
+
+\subsection*{Shape}
+Hands are divided into one-suited, two-suited, three-suited and
+balanced (for our purposes defined as 4432 or 4333) shapes.  A
+``suit'' is a suit of at least 4 cards, provided the hand is not
+balanced.  Every shape that does not have an 8-card suit or 12 cards
+in two suits is shown exactly, except that the 2- and 3-card suits of
+a 7321-type hand are not distinguished.  With extreme shape, make the
+smallest lie possible.
+
+\subsubsection*{One-suiters}
+First bid your suit using the scheme 1\h\ = \s, 1\nt\ = \h, 2\c\ = \d,
+2\d\ = \c.  (This ensures that the relayer will play the hand if we
+play in responder's long suit, provided it is not \h.)  Your next bid
+will be 2\s\ or higher.  Look at your length in your other three suits
+and see if you have a unique shortest suit.  If so, bid 2\s\ if it is
+the highest side suit, bid 2\nt\ if it is the middle side suit, and do
+nothing for now (a kind of zoom) if it is the lowest side suit; then
+show your shape: 3\d\ = 5332, 3\h\ = 6331, 3\s\ = 7330, \zoom{3\nt} =
+7321.  The underline is a reminder to zoom to range and controls,
+since 7321 is the highest possible shape on this sequence.  If you do
+not have a unique shortest suit, your shape must be 6322 or 7222, and
+the sequences are 2\s; 3\c; 3\h = 6223, 2\s; 3\c; \zoom{3\s} = 6232,
+3\c; 3\h = 7222, 3\c; \zoom{3\s} = 6322.  (How do you remember these
+sequences?  The general rule is increasing numeric order; the general
+exception is that when the highest bid would then show a rarer shape
+than the bid one lower, we switch them, because zooming saves
+\emph{two} steps.)
+
+\subsubsection*{Two-suiters}
+Generally begin by bidding both your suits according to the one-suited
+scheme.  However, partner's relay asks will prevent you from making
+two consecutive bids!  So, there are special sequences for showing
+\d+\h\ or \c+\d: with \d+\h\ bid 1\s; 2\c, and with \c+\d\ do nothing
+for now; your first bid will be 2\h\ or higher, showing a two-suiter
+with the minors.  There's one other slight adjustment: your next bid
+might be 2\h, but you can't do that if you bid 2\d\ showing \c.  So
+showing a major and then bidding 2\h\ shows \c, also, as though it
+were 1\h/1\nt; 2\d; 2\h.  (We didn't use the 2\h\ rebid for
+one-suiters, so this is OK.)
+
+Suppose first that one of your suits is only 4 cards long.  Bid
+2\h\ now if it's the higher one.  Next bidding 3\c\ shows 5422 and
+\zoom{4\c} shows 7411.  Otherwise, one of your short suits is shorter
+than the other; bid 2\nt\ if it's the higher one.  Then show your
+shape: 3\d\ = 5431, 3\h\ = 6421, 3\s\ = 6430, 3\nt\ = 7420 (zoom from
+3\nt\ only if you bid 2\nt\ first).  (Generally when $x$ shows two
+equal lengths, $x-1$ shows ``high shortage.'')
+
+If instead both your suits have at least 5 cards, bid 2\s.  Now
+3\d\ shows singletons in both short suits, followed by 3\s\ = 5611,
+\zoom{3\nt} = 6511.  Otherwise, bid 3\c\ if your higher short suit is
+shorter, then 3\h\ = 5521, 3\s\ = 5530, 3\nt\ = 5620, \zoom{4\c} =
+6520.  (The first two digits in these numbers are the lengths of your
+long suits, with the higher one first; the second two are the lengths
+of your short suits with the longer one first.)
+
+\subsubsection*{4432 and 4333 shapes}
+With these balanced shapes, start with 1\s\ (so that relayer will
+declare a notrump contract).  Your next bid will be 2\d\ or higher.
+With 4432, consider your two 4-card suits; bid 2\d\ if they are the
+same color, 2\h\ if they are the same rank, and do nothing for now if
+they are the same shape; then bid your doubleton: 2\nt\ = \s, 3\c\ =
+\c, 3\d\ = \d, \zoom{3\h} = \h.  With 4333, bid 2\d\ with a 4-card
+major, then 2\s\ always, then 3\c\ with long \c\ or \h\ and \zoom{3\d}
+with long \d\ or \s.
+
+\subsubsection*{Three-suiters}
+These are last because they live in the gaps formed by the rest of the
+system.  The two unused sequences are 1\h; 1\nt; 2\d\ and 2\c; 2\h.
+The first shows a three-suiter with both majors, the second a
+three-suiter with both minors.  After one of these starts, there are
+only 8 possible shapes, so the follow-ups are simple and step-based:
+bid the cheapest step first if you have a high short suit (\s\ or \d),
+then bid in steps showing the lengths of your long suits in
+\s\h\d\c\ order (444, 445, 454, 544---and zoom with 544).
+
+\subsection*{Range}
+Bid the cheapest step with a minimum, otherwise zoom on to controls.
+A minimum is a hand with fewer than 12 \hcp\ or fewer than 3 \ak.  A
+passed hand is always a minimum and skips this stage.  
+
+\subsection*{Controls}
+We define \ak\ as a measure of controls: an Ace is worth 2 \ak, a King
+1 \ak.  We don't count any \ak\ for shortness, since relayer already
+knows responder's shape.  \ak\ points are shown in steps, starting
+with 2 (and zooming with 5) if responder has shown a minimum, 3 (never
+zooming) if a maximum.
+
+\subsection*{Denial cuebidding}
+Sort your suits by length with the longer suits first, breaking ties
+by putting higher ranking suits before lower ones.  You will cycle
+through the suits in this order, looking at each suit a number of
+times depending on its length: three times for suits of at least 4
+cards, twice for 3-card suits, once for 2-card suits, and never for
+singletons or voids.  The first time you look at a suit, check whether
+it contains exactly one of the Ace or King; the second time, check
+whether it contains the Queen; the third time, check whether it
+contains the Jack.  (There is an exception for suits of 6 or more
+cards described below.)  So, once you have all these ``yes'' or ``no''
+answers, what do you \emph{bid}?  If the answer to the first question
+is ``no,'' bid the cheapest step.  In general, skip a number of steps
+equal to the number of ``yes'' answers.  If relayer continues, start
+again where you left off, with the answer after the first ``no.''  In
+these auctions, any non-relay bid by the relayer is to play, as is any
+bid at the slam level; the highest relay ask is 5\nt.
+
+\subsubsection*{Long suit exception}
+When checking a suit of 6 or more cards, replace the first two checks
+with the following: first check whether it contains at least two of
+the Ace, King and Queen, then check whether it contains an odd number
+(the larger possibility given the answer to the first check).
+
+\subsection*{Examples}  In each example North deals and opens 1\c.
+\[
+\begin{tabular}{ll|ll|lll|ll|l}
+1.
+&\s\ KQ73&1\c&2\c&\d&                     \qquad 2.&\s\ A9&1\c&1\s&balanced or \d+\h\\
+&\h\ AKJ2&2\d&2\h&three-suited with \c+\d&         &\h\ AQ1072&1\nt&2\h&same rank\\
+&\d\ Q10&2\s&3\c&4144&                             &\d\ AQJ&2\s&2\nt&2344\\
+&\c\ Q107&3\d&3\nt&maximum, 4 \ak&                 &\c\ AK9&3\c&3\d&minimum\\
+&&4\d&4\h&end signal&                              &&3\h&3\s&2 \ak\\
+&\s\ J654&4\s&---&9 \ak\ is not enough&            &\s\ J2&4\c&4\h&\d K, no \c K\\
+&\h\ 4&&&\;\;for slam without&                     &\h\ K98&4\s&5\c&\h K, no \s K\\
+&\d\ K954&&&\;\;more distribution.&                &\d\ K642&5\d&5\h&no \d Q\\
+&\c\ AKJ6&&&&                                      &\c\ J732&5\s&5\nt&no \c Q\\
+\multicolumn{5}{}&&                                &&6\nt&---&7\nt\ is at best\\
+\multicolumn{5}{}&&                                &&&&\;\;on a finesse.
+\end{tabular}
+\]
+
+\subsection*{Further avenues}
+We have described a simple, effective system for game-forcing auctions
+after a 1\c\ opener.  There is still room for extension and
+improvement, though.
+\begin{itemize}
+\item After a 1\c\ opening and a negative 1\d\ response, 1\h\ can be
+  played as any 20\+ \hcp, with 1\s\ a second negative and all the
+  relays shifted up two steps.  (There is no range ask, and controls
+  are shown starting with 0 \ak.)  In fact, there's an entire system
+  in which most of the game-forcing auctions use similar relays after
+  limited opening bids as well.
+\item We have not assigned meanings to any of relayer's non-relay bids
+  below 3\nt\ or to jumps to game in a suit.  The former can be used
+  to show minimum 3-suiters (``reverse relay'') or to ask about
+  stoppers in side suits; the latter can be played as keycard asks or
+  as nonforcing slam tries (``optional RKC'').
+\item Some denial cuebidding auctions contain redundant information,
+  such as the 5\c\ bid in the second example; South has shown only two
+  \ak\ and has already shown the \d K and \h K so cannot have the \s K
+  as well.  The 5\c\ bid could therefore deny the \d Q instead, saving
+  two bids.  But it's tricky to make sure that both partners make the
+  same inferences in all situations.
+\end{itemize}
+
+\subsection*{That's it}
+Enjoy! \hfill \textsl{--- Reid Barton, September 17, 2008}
+
+\end{document}
