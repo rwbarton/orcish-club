@@ -17,6 +17,8 @@
 \newcommand{\x}{\textsc{x}}
 \newcommand{\y}{\textsc{y}}
 \newcommand{\+}{\ensuremath{^+}}
+\newcommand{\M}{\textsc{m}}
+\newcommand{\OM}{\textsc{om}}
 \newcommand{\modifications}{\paragraph{Modifications from Revision.}}
 
 \title{The Orcish Club}
@@ -127,6 +129,106 @@ via 2\x--2\y--2\nt--3\c--3\y.  A jump shift to a new suit after
 2\x--2\y\ is a splinter raise.  (Most of that assumes \y\ is a major.
 When \x\ is \c\ and \y\ is \d, a raise to 3\d\ is probably a
 suggestion to play 5\d, hence a real fit.)
+
+\chapter{The 1\h\ and 1\s\ openings}
+
+We open 1\h\ or 1\s\ with a 5-card major and 10--14 \hcp\ in \fs,
+12--16 \hcp\ in \tf\ (though we could occasionally have fewer than
+12).  We open 1\h\ or 1\s\ even with a 6-card minor if the hand is
+minimum.  We normally do not open 1\nt\ with a 5-card major.
+
+Our non-jump responses are fairly similar to standard 2/1.  1\s\ over
+1\h\ is natural and forcing with 4\+\ spades, and 1\nt\ is a forcing
+notrump.  However, neither of these bids promises any values.  With a
+non-invitational 3-card raise, we make a delayed raise through 1\nt.
+In repsonse to 1\h\ with a hand of invitational strength, exactly 4
+spades, and no heart fit, we start with the forcing notrump and then
+bid 2\s\ on the next round; we do not use the common treatment of this
+sequence as a strong raise of opener's second suit.  We also bid a
+forcing 1\nt\ over 1\s\ with 1444 shape.  A jump into a new suit on
+the second round (except 1\s--1\nt--2\d--4\c, which passes 3\nt\ with
+no known major suit fit) reveals this hand type; the auction
+1\s--1\nt--2\s--3\nt\ is also possible.
+
+A 2/1 bid is forcing to game and is almost always a 5-card suit: the
+only common exception is (4432) shape with 2 cards in opener's major.
+A rebid by opener above 2 of the opened major shows extra values.
+
+Our raise structure is less standard.  We play a raise to 2 as an
+\emph{invitational} 3-card raise, about 11--13 support points.  A jump
+to 3 is a mixed raise, about 8--10 points with 4-card support; opener
+should usually not bid game without extra shape.  A jump to 4 is a
+two-way bid, showing either a hand with a fit and game values that
+sees little chance of slam, or a hand with enough shape to want to
+play in game even without values (5-card support and a singleton or
+4-card support and a void).  We have two ranges of splinters, shown in
+Figure \ref{fig:1M-splinters}.  This leaves the invitational 4-card
+raises and slammish 3-card raises.  We handle both through the
+2\nt\ gadget, described in Figure \ref{fig:1M-2NT}.
+
+The jump shift 1\h--2\s\ is weak; jump shifts to the three level are
+natural and invitational.
+
+\begin{figure}
+\begin{center}
+\begin{tabular}{lllll}
+1\h
+&3\s &&Lower-range splinter in an undisclosed suit\\
+&    &3\nt&Asks which suit.  4\c\ = \c, 4\d\ = \d, 4\h\ = \s.\\
+&3\nt&&Upper-range splinter in \s\\
+&4\c &&Upper-range splinter in \c\\
+&4\d &&Upper-range splinter in \d\\
+1\s
+&3\nt&&Lower-range splinter in an undisclosed suit\\
+&    &4\c&Asks which suit.  4\d\ = \d, 4\h\ = \h, 4\s\ = \c.\\
+&4\c &&Upper-range splinter in \c\ or \h\\
+&    &4\d&Asks which suit.  4\h\ = \h, 4\s\ = \c.\\
+&4\d &&Upper-range splinter in \d\\
+&\hbox to 0pt{\hss(}4\h&&To play)\\
+\end{tabular}
+\end{center}
+\caption{\label{fig:1M-splinters}Splinter raises of a 1\h\ or 1\s\ opening.}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\begin{tabular}{llllllll}
+1\M&2\nt
+ &3\c &&&&&minimum without shortness or with a singleton \OM,\\
+&&    &&&&&\quad or a maximum without shortness not interested in 3\nt,\\
+&&    &&&&&\quad or any hand with a void\\
+&&    &3\d &&&&Responder wants to go to game opposite any hand\\
+&&    &    &&&&\quad except possibly the minimum without shortness.\\
+&&    &    &3\M &&&minimum without shortness\\
+&&    &    &3\OM&&&\OM\ shortness, any strength\\
+&&    &    &    &3\nt&&Asking for further description.\\
+&&    &    &    &    &4\c&maximum, \OM\ void\\
+&&    &    &    &    &4\d&minimum, \OM\ void\\
+&&    &    &    &    &4\h&minimum but game-going, \OM\ singleton.\\
+&&    &    &    &    &4\s&dead minimum, \OM\ singleton.\\
+&&    &    &    &    &   &\quad Combined with the previous step when \M\ = \h.\\
+&&    &    &3\nt&&&minimum, \c/\d\ void\\
+&&    &    &    &4\c &&Asks which minor.  4\d\ = \d, 4\h\ = \c.\\
+&&    &    &4\c &&&maximum, \c\ void\\
+&&    &    &4\d &&&maximum, \d\ void\\
+&&    &    &4\M &&&maximum without shortness not interested in 3\nt\\
+&&    &3\M &&&&Responder wants to go to game only opposite a maximum. (\nf)\\
+&&    &    &&&&\quad 3\nt, 4\c, 4\d\ continuations as above; 4\M\ to play.\\
+&&3\d &&&&&minimum, \d\ singleton\\
+&&3\h &&&&&minimum, \c\ singleton\\
+&&3\s &&&&&maximum, any singleton\\
+&&    &3\nt&&&&Asking for the singleton.\\
+&&    &    &4\c&&&\c\ singleton\\
+&&    &    &4\d&&&\d\ singleton\\
+&&    &    &4\h&&&\OM\ singleton\\
+&&3\nt&&&&&maximum without shortness interested in 3\nt\\
+&&4\c &&&&&maximum, 5-card \c\ suit\\
+&&4\d &&&&&maximum, 5-card \d\ suit\\
+&&4\h &&&&&maximum, 5-card \OM\ suit or (74)11\\
+\end{tabular}
+\end{center}
+\caption{\label{fig:1M-2NT}The 2\nt\ gadget.}
+\end{figure}
 
 \chapter{The weak 1\nt}
 
