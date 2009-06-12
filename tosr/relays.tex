@@ -1,0 +1,83 @@
+\documentclass{article}
+\usepackage{fullpage}
+
+\renewcommand{\c}{$\clubsuit$}
+\renewcommand{\d}{$\diamondsuit$}
+\newcommand{\h}{$\heartsuit$}
+\newcommand{\s}{$\spadesuit$}
+\newcommand{\n}{\textsc{nt}}
+\newcommand{\+}{$^+$}
+
+\newcommand{\hsmash}[1]{\hbox to 0pt{#1\hss}}
+
+\begin{document}
+
+
+\begin{table}[htp]
+\centering
+\begin{minipage}{\textwidth}
+Positive responses to 1\c\ strong
+
+With a balanced (4432 or 4333) hand bid 1\s\ then 2\d\+.  Otherwise bid your suit(s) ``down the line'', except bid 1\s\ then 2\c\ with the reds and 2\h\+ directly with the minors, and 2\c\ then 2\h\ with (41)44.
+
+\smallskip
+
+\begin{tabular}{l|l|l|l|l|}
+& 1-suiter & 2-suiter & 3-suiter & balanced \\
+1\h & \s & \s & \s\hsmash{\footnote{With \s\d\c\ bid 2\c\ first}} & -- \\
+1\s & -- & \h\d\ (2\c\ next) & -- & balanced \\
+1\n & \h & \h & \h\hsmash{\footnote{With \h\d\c\ bid 2\c\ first}} & -- \\
+2\c & \d & \d\hsmash{\footnote{With \d\c\ bid 2\h\+ directly}} & \d & -- \\
+2\d & \c & \c\ (non-reverse) & \d\ or \c & \textbf{BAL} \\
+2\h & -- & reverse (45\+); \c & \c\ + (\s\ or \h) & \smash{\vdots} \\
+2\s & high shortage & 5\+5\+ & \textbf{3-SUITER} \\
+2\n & mid shortage & high shortage & \textbf{3-SUITER} \\
+3\c & equal shortage & 5422 / high shortage \\
+3\d & 5332 & 5431 / equal shortage \\
+3\h & 6331 / 6223 / 7222\hsmash{\footnote{6223 is shown via 2\s\ and 3\c\ while 7222 is shown via 3\c\ only.}} & 6421 / 5521 \\
+3\s & 7330 / 6232 / 6322\hsmash{\footnote{6232 is shown via 2\s\ and 3\c\ while 6322 is shown via 3\c\ only.}} & 6430 / 5530 / 5611 \\
+3\n & 7(32)1 & 7420 / 5620 / 6511 \\
+4\c & \smash{\vdots} & 7411 / 6520 \\
+4\d & & \smash{\vdots}
+\end{tabular}
+
+\bigskip
+
+\textbf{3-SUITER}
+
+Step 1 may be 2\s\ or 2\n\ depending on whether responder is short in a minor or a major.
+
+\smallskip
+
+\begin{tabular}{l|l}
+1&high shortage (then start at 2)\\
+2&4441\\
+3&4450\\
+4&4540\\
+5&5440\\
+6&\smash{\vdots}
+\end{tabular}
+
+\bigskip
+
+\textbf{BAL}
+
+With 4432, show whether the two four-card suits are the same color, rank, or shape, then bid your doubleton.  With 4333 bid 2\s\ (first bidding 2\d\ with a 4-card major) then show whether your 4-card suit is low or high.
+
+\smallskip
+
+\begin{tabular}{l|l|l|}
+& 4432 & 4333 \\
+2\d & color & 4-card major \\
+2\h & rank & -- \\
+2\s & -- & always \\
+2\n & 2\s & -- \\
+3\c & 2\c & 3433 \\
+3\d & 2\d & 4333 \\
+3\h & 2\h & \smash{\vdots} \\
+3\s & \smash{\vdots}
+\end{tabular}
+\end{minipage}
+\end{table}
+
+\end{document}
