@@ -18,10 +18,14 @@
 \newcommand{\p}{\textsc{pass}}
 \newcommand{\x}{\textsc{x}}
 \newcommand{\y}{\textsc{y}}
+\newcommand{\art}{\textsc{art}}
+\newcommand{\nat}{\textsc{nat}}
 \newcommand{\+}{\ensuremath{^+}}
 \newcommand{\M}{\textsc{m}}
 \newcommand{\OM}{\textsc{om}}
 \newcommand{\modifications}{\paragraph{Modifications from Revision.}}
+\newcommand{\zoom}{\underline}
+\newcommand{\hsmash}[1]{\hbox to 0pt{#1\hss}}
 
 \title{The Orcish Club}
 \begin{document}
@@ -54,19 +58,41 @@ opposite 12--16 without a good fit, so we may feel free to open with
 
 \chapter{The 1\c\ opening}
 
+We first describe responses to a \fs\ 1\c\ opening.  Responses to a 
+\tf\ 1\c\ opener are similar; in section \ref{tf1c} we describe the changes
+when responder is a passed hand.
+
 1\d\ is the negative response, normally 0--8 \hcp, but could contain a
 stronger hand with fewer than 2 \ak.  1\h\+ is \gf, transfer-oriented
 symmetric relay, promising 2 \ak.
 
 \section{1\c--1\d}
-1\h\ shows any 19\+ \hcp, 1\nt\ shows 16--18 \bal, and suit bids
-from 1\s\ to 2\h\ are natural, 5 cards, 15--18 \hcp.  Opener uses his
-discretion with (4441) shape.  2\s\+ do not exist.
+1\h\ shows any 19\+ \hcp unbalanced, 21\+ \hcp balanced.  1\nt\ shows 16--18 \bal (including 5 card majors).  Other rebids are artificial.
+
+\begin{figure}[h]
+\begin{tabular}{ll}
+1\s & At least one long minor, with a 4-card major possible.\\
+2\c & Both majors.\\
+2\d & One major, 6+.\\
+2M & 5+M, 4+m.\\
+2\nt & 6 card minor any quality, almost enough for 1\h.\\
+3\x & Natural, long good suit.\\
+3\nt & To play, long running suit with side stoppers.\\
+4M & To play.\\
+\end{tabular}
+\caption{1\c - 1\d}
+\end{figure}
+
+With a semi-positive hand (a good 6 to 8), responder has two options: ``raise'' the artificial bid, showing a specified shape, or use an artificial inquiry.  All other bids show less than semi-positive.
+
+\newpage
 
 \subsection{1\c--1\d--1\h}
 1\s\ is a second negative showing 0--4 \hcp; 1\nt\+ is \gf,
 transfer-oriented symmetric relay shifted up two steps, not promising
 any \ak.
+
+We may eventually modify the two-up relay chart to change some optimizations, but for now it is just shifted up 2.
 
 \subsubsection{1\c--1\d--1\h--1\s}
 1\nt\ shows 21--23 \bal.  It's sort of silly that we end up in
@@ -76,25 +102,15 @@ game-forcing hand).
 
 2\c\ is an artificial \gf.  Continuations are natural.
 
-2\nt\ seems not to exist.
+2\nt\ seems not to exist.  (maybe it should be canape with long clubs?)
 
-Suit bids from 2\d\ to 3\c\ are natural, and to the extent possible,
-our agreements about auctions after 1\c--1\d--2\x\ apply here too.
+Suit bids from 2\d\ to 3\c\ are natural.
 
-\subsection{1\c--1\d--1\s}
-We pretend that opener opened 1\s, except his range is now 15--18
-rather than 10--14, and play our usual systems.  This is reasonable
-since responder could have a game-forcing hand without a spade fit
-(with 0--1 \ak).
+\subsubsection{1\c--1\d--1\h--1\s--2\x}
 
-\subsection{1\c--1\d--1\nt}
-Strong notrump systems are on; again, responder could have a
-game-forcing hand.
-
-\subsection{1\c--1\d--2\x}
 In general, continuations are mostly natural, except that 2\nt\ by
 either hand is artificial showing a minimum hand in the context of the
-auction.  It is a puppet to 3\c\ when it is responders first rebid, and
+auction.  It is a puppet to 3\c\ when it is responders first bid after 1\s, and
 otherwise mostly forcing, but may be passed if a misfit seems likely.
 
 With a bad hand, responder must either
@@ -107,8 +123,7 @@ With a bad hand, responder must either
 
 An exactly invitational hand with a 6\+-card suit \y\ above \x\ may
 bid 2\nt\dots3\y, and an invitational hand with a ``fit'' for \x\ may
-bid 2\nt\dots3\x\ (unless \x=\c; then responder must have an invite,
-so opener should bid the lowest contract he's willing to play).  The
+bid 2\nt\dots3\x.  The
 invitational raise is really just suggesting to play 3\x\ when the
 invite is rejected; since we cannot play 2\nt\ this may not be a real
 fit and opener should probably bid 3\nt\ even holding hearts.  That
@@ -116,8 +131,9 @@ covers the immediate 2\nt\ response by responder.  (The sequence
 2\nt\dots3\nt\ is undefined.)
 
 If responder does not make an initial jump shift or 2\nt\ response,
-the auction is forcing to 2\nt\ by either player.  Bypassing 2\nt\ to
-bid at the 3-level establishes a game force.  The artifical 2\nt\ is
+the auction is forcing to 2\nt\ by either player.  Bidding immediately above 2\nt,
+or slowly bidding to a new suit above \x at the 3 level establishes a game force.
+The artifical 2\nt\ is
 not forcing; a minimum hand can pass but will more often pull to a
 known fit or to 3\c\ to play in opener's second suit.  A maximum hand
 bids above 3\x\ to establish a game force (this is why a hand which is
@@ -128,9 +144,470 @@ a game force rather than bidding game directly, it tends to show doubt
 over strain rather than level.  So 2\x--2\y--3\y\ will usually be a
 3-card (\gf) raise.  Opener can make a minimum (3- or) 4-card raise
 via 2\x--2\y--2\nt--3\c--3\y.  A jump shift to a new suit after
-2\x--2\y\ is a splinter raise.  (Most of that assumes \y\ is a major.
-When \x\ is \c\ and \y\ is \d, a raise to 3\d\ is probably a
-suggestion to play 5\d, hence a real fit.)
+2\x--2\y\ is a splinter raise.
+
+\subsection{1\c--1\d--1\h--1\s--3\c}
+If responder does not pass now, a game force is created.
+
+\subsection{Openers artificial rebids over 1\c - 1\d}
+
+\begin{figure}[p]
+\begin{tabular}{lllllll}
+1\c & 1\d & 1\s &&&& At least one long minor, with a 4-card major possible.\\
+&&& 1\nt &&& Semi-positive ask.\\
+&&&   &2m && Min, 5\+ m, 4 card M possible.\\
+&&&   &   &2M & To play, but opener can raise.\\
+&&&   &   &2\nt & Natural, invitational (near max).\\
+&&&   &2\h && 4\h, good 5\+ minor, non-min.\\
+&&&   &   &2\s & Asks for minor. (2\nt = clubs, 3\c=diamonds).\\
+&&&   &   &2\nt & 6\+ \s, forcing.\\
+&&&   &   &3m & Pass or correct.\\
+&&&   &   &3\h & Natural, invitational.\\
+&&&   &2\s && 4\s, good 5+ minor, non-min.\\
+&&&   &   &2\nt & Asks for minor.\\
+&&&   &   &3m & Pass or correct.\\
+&&&   &   &3\h & 6+\h, forcging.\\
+&&&   &   &3\s & Natural, invitational.\\
+&&&   &2\nt && 5\+ / 4\+ minors, non-min.\\
+&&&   &   & 3m & To play.\\
+&&&   &   & 3M & 6+M, non forcing but opener can raise.\\
+&&&   &   & 3\nt & To play.\\
+&&&   &   & 4m & Natural, invitational.\\
+&&&   &3m && Good 6\+m, non-min, no 4 card M.\\
+&&& 2m &&& Pass or correct.\\
+&&& 2\h &&& To play, weaker than semi-positive, but opener can raise.\\
+&&& 2\s &&& Artificial semi-positive, 4-4 in majors (possibly 5-4).\\
+&&&   & 2\nt && Both minors, min.\\
+&&&   & 3m && No major, min.\\
+&&&   & 3M && Natural, min, 4 card suit.\\
+&&&   & 3\nt && Natural, max, no major.\\
+&&&   & higher && Natural, max.\\
+&&& 2\nt &&& Weak, artificial, 5\+ / 5\+ in majors?\\
+&&& 3\x &&& To play, weak, but opener can raise.\\
+&&& 3\nt &&& To play.\\
+1\c & 1\d & 1\nt &&&& 16-18 balanced (could have 5 card major).  Strong systems on.
+\end{tabular}
+\caption{1\c--1\d--(1\s, 1\nt)}
+\end{figure}
+
+\begin{figure}[p]
+\begin{tabular}{lllllll}
+1\c & 1\d & 2\c &&&& Both majors.\\
+&&& 2\d &&& Asks for better major.  Semi-positive unless next bid passed.\\
+&&&   & 2M && Better major.\\
+&&&   &   & 2\s & (over 2\h) Natural, invitational in spades.\\
+&&&   &   & 2\nt-3M & Natural, invitational.\\
+&&&   &   & 3\h & (over 2\s) Natural, invitational in hearts.\\
+&&&   &   & 3\nt & ?\\
+&&&   &   & 4M & To play.\\
+&&&   &   & others & Splinters.\\
+&&& 2M &&& To play.\\
+&&& 2\nt &&& Weak, both minors, 5\+, 5\+.\\
+&&& 3\c &&& Semi-positive, both minors, 5\+, 5\+.\\
+&&& 3\d &&& Natural, weak.\\
+&&& 3M &&& Natural, weak with 5 card suit; opener can raise.\\
+&&& 3\nt &&& To play.\\
+&&& 4m &&& Transfer to corresponding major.\\
+&&& 4M &&& To play.\\
+1\c & 1\d & 2\d &&&& One major 6\+.\\
+&&& 2M &&& Pass or correct.\\
+&&& 2\nt &&& Asks strength/suit, semi-positive.\\
+&&&   &3\c && Min, \h.\\
+&&&   &   &3\d & Puppet to 3\h (after which 3\nt is choice of games).\\
+&&&   &   &3\h & To play.\\
+&&&   &   &3\s & Natural, 6\+ \s.\\
+&&&   &   &3\nt & To play.\\
+&&&   &3\d && Min, \s.\\
+&&&   &   &3\h & Puppet to 3\s (after which 3\nt is choice of games).\\
+&&&   &   &3\s, 3\nt & To play.\\
+&&&   &3\h && Max, \h.\\
+&&&   &   &3\s & Natural, 6\+ \s.\\
+&&&   &   &3\nt & To play.\\
+&&&   &   &4m & Natural, invitatinoal.\\
+&&&   &3\s && Max, \s.\\
+&&&   &   &3\nt & To play.\\
+&&&   &   &4m & Natural, invitational.\\
+&&&   &   &4M & To play.\\
+&&&3\c &&& Weak, long suit \\
+&&&3\d &&& Semi-positive, 6\+ \h.\\
+&&&3M &&& Weak, long suit.\\
+&&&3\nt &&& To play.\\
+&&&4m &&& Weak, natural, very long suit.\\
+&&&4M &&& Natural, to play, very long suit.\\
+\end{tabular}
+\caption{1\c-1\d-(2\c,2\d)}
+\end{figure}
+
+\begin{figure}[h]
+\begin{tabular}{lllllll}
+1\c & 1\d & 2M &&&& 5\+ M, 4+ m.\\
+&&& 2M+1 &&& Semi-positive ask.\\
+&&&   & 2M+2 && Min, \c.\\
+&&&   & 2M+3 && Min, \d.\\
+&&&   & 3M-1 && Max, \c.\\
+&&&   & 3M && Max, \d.\\
+&&&   &   & 3\s & (over 2\h) 6\+ spades, forcing if opener max.\\
+&&& 2\nt &&& (over 2\h) spades, weak.\\
+&&& 3m &&& Pass correct.\\
+&&& 3M &&& Natural, invitational.\\
+&&& 3oM &&& Weak, long suit.\\
+&&& 3\nt &&& To play.\\
+1\c & 1\d & 2\nt &&&& 6 card minor, any quality, almost strong enough for 1\h.\\
+&&& 3\c &&& Pass or correct.\\
+&&& \hbox to 0 pt{3\d,3\h} &&& Transfer.\\
+&&& 3\s &&& Asks for minor (3\nt = \c, 4\c = \d).\\
+&&& 3\nt &&& To play.\\
+1\c & 1\d & 3\x &&&& Natural, long good suit.\\
+1\c & 1\d & 3\nt &&&& To play.\\
+\end{tabular}
+\caption{1\c-1\d-(2\h+)}
+\end{figure}
+
+\newpage
+
+\section{Game forcing responses to 1\c}
+
+\subsection{Basic idea}
+A \gf\ response requires 2 \ak; see \ref{controls} Controls.  The 1\c\ opener
+is now the \emph{relayer} or \emph{asker} and will continue making the
+cheapest available bid (with two exceptions, see below) until able to
+place the contract.  The other hand is called the \emph{relay
+  responder} and makes a sequence of descriptive bids (separated by
+semicolons here).  Ideally, the relayer will be the declarer and the
+defenders will have no information about the closed hand; hence
+``transfer-oriented.''
+
+\subsection{Signoffs}
+If the relayer bids 3\nt, that is always to play.  A bid of 4\d\ by
+the relayer is the \emph{end signal}: responder bids 4\h\ whereupon
+the relayer places the contract.  But with a very good hand responder
+can bid over 3\nt\ or 4\d\ showing controls, starting with 4\c/4\s\ =
+4 \ak.  (See \ref{controls} Controls.)  When the next step is 3\nt\ or 4\d,
+relayer can continue relays by bidding one step higher instead.
+
+\subsubsection{Slam Invites}
+
+\subsubsection{Quantitative Invites}
+
+\subsection{Responder's bids}
+The responding hand is described in four stages: shape, range,
+controls, and denial cuebidding (location of specific honors).
+Sometimes a single bid belongs to two or more stages, thanks to a
+technique called \emph{zooming}: when responder would make the highest
+possible bid at the end of one stage, responder also begins the next
+stage as though the relayer had made a relay ask one step below that
+bid.  For example, the sequence 1\s; 3\d\ just shows 3424 shape, but
+1\s; 3\h\ shows 4243 shape and a minimum, 1\s; 3\s\ shows 4243 shape
+and a maximum with 3 \ak, etc., because there is no shape assigned to
+1\s; 3\s.
+
+\subsection{Shape}
+Hands are divided into one-suited, two-suited, three-suited and
+balanced (for our purposes defined as 4432 or 4333) shapes.  A
+``suit'' is a suit of at least 4 cards, provided the hand is not
+balanced.  Every shape that does not have an 8-card suit or 12 cards
+in two suits is shown exactly, except that the 2- and 3-card suits of
+a 7321-type hand are not distinguished.  With extreme shape, make the
+smallest lie possible.
+
+\subsubsection{One-suiters}
+First bid your suit using the scheme 1\h\ = \s, 1\nt\ = \h, 2\c\ = \d,
+2\d\ = \c.  (This ensures that the relayer will play the hand if we
+play in responder's long suit, provided it is not \h.)  Your next bid
+will be 2\s\ or higher.  Look at your length in your other three suits
+and see if you have a unique shortest suit.  If so, bid 2\s\ if it is
+the highest side suit, bid 2\nt\ if it is the middle side suit, and do
+nothing for now (a kind of zoom) if it is the lowest side suit; then
+show your shape: 3\d\ = 5332, 3\h\ = 6331, 3\s\ = 7330, \zoom{3\nt} =
+7321.  The underline is a reminder to zoom to range and controls,
+since 7321 is the highest possible shape on this sequence.  If you do
+not have a unique shortest suit, your shape must be 6322 or 7222, and
+the sequences are 2\s; 3\c; 3\h = 6223, 2\s; 3\c; \zoom{3\s} = 6232,
+3\c; 3\h = 7222, 3\c; \zoom{3\s} = 6322.  (How do you remember these
+sequences?  The general rule is increasing numeric order; the general
+exception is that when the highest bid would then show a rarer shape
+than the bid one lower, we switch them, because zooming saves
+\emph{two} steps.)
+
+\subsubsection{Two-suiters}
+Generally begin by bidding both your suits according to the one-suited
+scheme.  However, partner's relay asks will prevent you from making
+two consecutive bids!  So, there are special sequences for showing
+\d+\h\ or \c+\d: with \d+\h\ bid 1\s; 2\c, and with \c+\d\ do nothing
+for now; your first bid will be 2\h\ or higher, showing a two-suiter
+with the minors.  There's one other slight adjustment: your next bid
+might be 2\h, but you can't do that if you bid 2\d\ showing \c.  So
+showing a major and then bidding 2\h\ shows \c, also, as though it
+were 1\h/1\nt; 2\d; 2\h.  (We didn't use the 2\h\ rebid for
+one-suiters, so this is OK.)
+
+Suppose first that one of your suits is only 4 cards long.  Bid
+2\h\ now if it's the higher one.  Next bidding 3\c\ shows 5422 and
+\zoom{4\c} shows 7411.  Otherwise, one of your short suits is shorter
+than the other; bid 2\nt\ if it's the higher one.  Then show your
+shape: 3\d\ = 5431, 3\h\ = 6421, 3\s\ = 6430, 3\nt\ = 7420 (zoom from
+3\nt\ only if you bid 2\nt\ first).  (Generally when $x$ shows two
+equal lengths, $x-1$ shows ``high shortage.'')
+
+If instead both your suits have at least 5 cards, bid 2\s.  Now
+3\d\ shows singletons in both short suits, followed by 3\s\ = 5611,
+\zoom{3\nt} = 6511.  Otherwise, bid 3\c\ if your higher short suit is
+shorter, then 3\h\ = 5521, 3\s\ = 5530, 3\nt\ = 5620, \zoom{4\c} =
+6520.  (The first two digits in these numbers are the lengths of your
+long suits, with the higher one first; the second two are the lengths
+of your short suits with the longer one first.)
+
+\subsubsection{4432 and 4333 shapes}
+With these balanced shapes, start with 1\s\ (so that relayer will
+declare a notrump contract).  Your next bid will be 2\d\ or higher.
+With 4432, consider your two 4-card suits; bid 2\d\ if they are the
+same color, 2\h\ if they are the same rank, and do nothing for now if
+they are the same shape; then bid your doubleton: 2\nt\ = \s, 3\c\ =
+\c, 3\d\ = \d, \zoom{3\h} = \h.  With 4333, bid 2\d\ with a 4-card
+major, then 2\s\ always, then 3\c\ with long \c\ or \h\ and \zoom{3\d}
+with long \d\ or \s.
+
+\subsubsection{Three-suiters}
+These are last because they live in the gaps formed by the rest of the
+system.  The two unused sequences are 1\h; 1\nt; 2\d\ and 2\c; 2\h.
+The first shows a three-suiter with both majors, the second a
+three-suiter with both minors.  After one of these starts, there are
+only 8 possible shapes, so the follow-ups are simple and step-based:
+bid the cheapest step first if you have a high short suit (\s\ or \d),
+then bid in steps showing the lengths of your long suits in
+\s\h\d\c\ order (444, 445, 454, 544---and zoom with 544).
+
+\subsection{Range}
+Bid the cheapest step with a minimum, otherwise zoom on to controls.
+A minimum is a hand with fewer than 12 \hcp\ or fewer than 3 \ak.  A
+passed hand is always a minimum and skips this stage.  
+
+\subsection{Controls} \label{controls}
+We define \ak\ as a measure of controls: an Ace is worth 2 \ak, a King
+1 \ak.  We don't count any \ak\ for shortness, since relayer already
+knows responder's shape.  \ak\ points are shown in steps, starting
+with 2 (and zooming with 5) if responder has shown a minimum, 3 (never
+zooming) if a maximum.
+
+\subsection{Denial cuebidding}
+Sort your suits by length with the longer suits first, breaking ties
+by putting higher ranking suits before lower ones.  You will cycle
+through the suits in this order, looking at each suit a number of
+times depending on its length: three times for suits of at least 4
+cards, twice for 3-card suits, once for 2-card suits, and never for
+singletons or voids.  The first time you look at a suit, check whether
+it contains exactly one of the Ace or King; the second time, check
+whether it contains the Queen; the third time, check whether it
+contains the Jack.  (There is an exception for suits of 6 or more
+cards described below.)  So, once you have all these ``yes'' or ``no''
+answers, what do you \emph{bid}?  If the answer to the first question
+is ``no,'' bid the cheapest step.  In general, skip a number of steps
+equal to the number of ``yes'' answers.  If relayer continues, start
+again where you left off, with the answer after the first ``no.''  In
+these auctions, any non-relay bid by the relayer is to play, as is any
+bid at the slam level; the highest relay ask is 5\nt.
+
+\subsubsection{Long suit exception}
+When checking a suit of 6 or more cards, replace the first two checks
+with the following: first check whether it contains at least two of
+the Ace, King and Queen, then check whether it contains an odd number
+(the larger possibility given the answer to the first check).
+
+\subsubsection{Josh's Law}
+
+"Josh’s Law: Whenever information regarding high cards or their location is absolutely known from previous bidding, then that information is skipped even if it hasn’t been asked for yet. This can take many forms, such as knowing responder can have no more controls, or high card points, or can even pertain to distribution." \cite{TOSR}
+
+We do not currently play Josh's Law, but may eventually.
+
+\subsection{Examples}  In each example North deals and opens 1\c.
+\[
+\begin{tabular}{ll|ll|lll|ll|l}
+1.
+&\s\ KQ73&1\c&2\c&\d&                     \qquad 2.&\s\ A9&1\c&1\s&balanced or \d+\h\\
+&\h\ AKJ2&2\d&2\h&three-suited with \c+\d&         &\h\ AQ1072&1\nt&2\h&same rank\\
+&\d\ Q10&2\s&3\c&4144&                             &\d\ AQJ&2\s&2\nt&2344\\
+&\c\ Q107&3\d&3\nt&maximum, 4 \ak&                 &\c\ AK9&3\c&3\d&minimum\\
+&&4\d&4\h&end signal&                              &&3\h&3\s&2 \ak\\
+&\s\ J654&4\s&---&9 \ak\ is not enough&            &\s\ J2&4\c&4\h&\d K, no \c K\\
+&\h\ 4&&&  for slam without&                     &\h\ K98&4\s&5\c&\h K, no \s K\\
+&\d\ K954&&&  more distribution.&                &\d\ K642&5\d&5\h&no \d Q\\
+&\c\ AKJ6&&&&                                      &\c\ J732&5\s&5\nt&no \c Q\\
+\multicolumn{5}{}&&                                &&6\nt&---&7\nt\ is at best\\
+\multicolumn{5}{}&&                                &&&&  on a finesse.
+\end{tabular}
+\]
+
+\subsection{Relay Breaks}
+
+If opener makes a bid which is not the relay bid and is not a signoff bid, it is a relay break.  The meaning is determined by the following list.
+
+\begin{enumerate}
+\item 10-shape reverse relay.  If this is opener's first rebid above a 1\h, 1\s or 1\nt bid by responder, a relay break begins a 10-shape reverse relay sequence. 
+\item 4-shape reverse relay.  If this is opener's first rebid above a 2\c or 2\d bid by responder, a relay break begins a 4-shape reverse relay sequence.
+\item Stopper ask.  If responder has $n$ known 2 or 3 card suits, the first $n$ relay breaks are stopper asks, if below 3\nt.
+\item Exclusion.  If responder has finished showing shape with 3\h or lower, then 4\c is the exclusion relay.
+\item RKC ask.  If none of the above relay breaks applies and the bid is not a signoff or a slam invite, then it is a Roman keycard ask.
+\end{enumerate}
+
+\subsubsection{10-shape Reverse Relay}
+
+\subsubsection{4-shape Reverse Relay}
+
+\subsubsection{Stopper Ask}
+
+\subsubsection{Exclusion}
+
+\subsubsection{RKC Ask}
+
+\section{\tf\ seat 1\c\ openings} \label{tf1c}
+
+As normal, an opening of 1\c\ in \tf\ seat promises 2\hcp\ more than in \fs.  Thus all of responder's point ranges are shifted down by 2 points.
+
+Responder now needs 1-4 \ak\ and 7-10 \hcp\ for a positive response.
+
+There is no distinction between minimum and maximum for a responder's hand: after showing shape, the next question is number of \ak.
+
+\section{Interference Over 1\c}
+
+\begin{figure}[p]
+\begin{tabular}{cccl}
+1\c & (x) & -- & 7-8\hcp, not interested in 1\c xx\\
+1\c & (x) & xx & 7-8\hcp, 4\+ \c, interested in penalizing?\\
+1\c & (x) & 1\d & 0-6\hcp\\
+1\c & (x) & 1\h + & normal relays\\
+1\c & (1\d) & -- & semi-positive, non-\gf\\
+1\c & (1\d) & x & 0-6\hcp \\
+1\c & (1\d) & 1\h + & normal relays\\
+1\c & (1\h) & -- & Non-\gf \\
+1\c & (1\h) & x & Would have bid 1\h\\
+1\c & (1\h) & 1\s + & normal relays\\
+1\c & (1\s,2\c,2\d) & -- & 0-5\hcp\ or penalty pass or 6-8\hcp but not able to double.\\
+1\c & (1\s,2\c,2\d) & x & 6-8 \hcp, 3-4 cards in opponents suit; flattish with penalty interest or \gf without stopper.\\
+1\c & (1\s,2\c,2\d) & cue & \gf, takeout, decent support in unbid majors.\\
+1\c & (1\s,2\c,2\d) & suit jump & 6-8\hcp\ with 6\+ (or good 5) in suit.\\
+1\c & (1\s,2\c,2\d) & bid & Natural, \gf.\\
+1\c & (2M) & -- & Nothing to say or penalty pass. \\
+1\c & (2M) & x & 6-8\hcp, possibly more. \\
+1\c & (2M) & cue & Looking for stopper for 3\nt. \\
+1\c & (2\h) & 3\s & ? \\
+1\c & (2M) & 4m & Leaping Michaels. \\
+1\c & (2M) & 4M & Both minors. \\
+1\c & (2M) & bid & Natural, \gf.\\
+1\c & (3\x) & -- & Nothing to say or penalty pass.\\
+1\c & (3\x) & x & Take-out oriented, \gf.\\
+1\c & (3\x) & 4\x & Huge hand, takeout.\\
+1\c & (3\x) & suit jump & \gf, playable opposite no support.\\
+1\c & (3\x) & bid & Natural, \gf.\\
+1\c & (4\c+) & -- & Nothing to say or penalty pass.\\
+1\c & (4\c+) & x & Game values, cooperative.\\
+1\c & (4\c+) & cue & Huge hand, takeout.\\
+1\c & (4\c+) & \nt & Huge two suiter.\\
+1\c & (4\c+) & bid & Natural.\\
+\end{tabular}
+
+\begin{tabular}{cccccl}
+1\c & (--) & 1\d & (1M) & -- & forcing a double, could be penalty. \\
+1\c & (--) & 1\d & (1M) & x & Takeout. (later jump cue asks for stopper)\\
+1\c & (--) & 1\d & (1M) & 1\nt & 16-18\hcp, balanced.  Stopper and a source of tricks. \\
+1\c & (--) & 1\d & (1M) & 2\nt & 21-22\hcp, balanced.  Stopper and a source of tricks. \\
+1\c & (--) & 1\d & (1M) & jump shift & Natural, \gf \\
+1\c & (--) & 1\d & (1M) & cue & Big 2/3 suit takeout. \\
+1\c & (--) & 1\d & (1M) & jump cue & Natural (psych exposer). \\
+1\c & (--) & 1\d & (x = \d) & xx & penalty (to play).\\
+1\c & (--) & 1\d & (x = \d) & -- & strong, takeout-ish, relays on if passed to responder.\\
+1\c & (--) & 1\d & (x = \art) & bid & Natural.\\
+1\c & (--) & 1\d & (x = \art) & jump & Strong.\\
+1\c & (--) & 1\d & (x = suits) & cue & Takeout.\\
+1\c & (--) & 1\d & (x = suits) & jump cue & Psych-exposer.\\
+\end{tabular}
+\end{figure}
+
+\begin{figure}[h]
+
+\centering
+\begin{minipage}{\textwidth}
+\begin{tabular}{c}
+
+\begin{tabular}{l|l|l|l|l|}
+& 1-suiter & 2-suiter & 3-suiter & balanced \\
+1\h & \s & \s & \s\hsmash{\footnote{With \s\d\c\ bid 2\c\ first}} & -- \\
+1\s & -- & \h\d\ (2\c\ next) & -- & balanced \\
+1\nt & \h & \h & \h\hsmash{\footnote{With \h\d\c\ bid 2\c\ first}} & -- \\
+2\c & \d & \d\hsmash{\footnote{With \d\c\ bid 2\h\+ directly}} & \d & -- \\
+2\d & \c & \c\ (non-reverse) & \h+\s+(\d\ or \c) & \textbf{BAL} \\
+2\h & -- & reverse (45\+); \c & \c\+\d+(\s\ or \h) & \smash{\vdots} \\
+2\s & high shortage & 5\+5\+ & \textbf{3-SUITER} & \\
+2\nt & mid shortage & high shortage & \textbf{3-SUITER} & \\
+3\c & equal shortage & 5422 / high shortage && \\
+3\d & 5332 & 5431 / equal shortage &&\\
+3\h & 6331 / 6223 / 7222\hsmash{\footnote{6223 is shown via 2\s\ and 3\c\ while 7222 is shown via 3\c\ only.}} & 6421 / 5521&& \\
+3\s & 7330 / \zoom{6232} / \zoom{6322}\hsmash{\footnote{6232 is shown via 2\s\ and 3\c\ while 6322 is shown via 3\c\ only.}} & 6430 / 5530 / 5611&& \\
+3\nt & \zoom{7(32)1} & 7420 / 5620 / \zoom{6511}&& \\
+4\c & \smash{\vdots} & \zoom{7411} / \zoom{6520}&& \\
+4\d & & \smash{\vdots}&&\\
+\end{tabular} \\
+\\
+\hline
+\begin{tabular}{c|c}
+&\\
+\textbf{3-SUITER} & \textbf{BALANCED}\\
+
+\begin{tabular}{lll}
+1&&high shortage (then start at 2)\\
+2&&5440 (then ascending numeric)\\
+&a&4450 \\
+&b&4540 \\
+&c&\zoom{5440}\\
+3&&\zoom{4441}\\
+4&&\smash{\vdots}\\
+\\
+\\
+\end{tabular} &
+
+\begin{tabular}{l|l|l|}
+& 4432 & 4333 \\
+2\d & color & 4-card major \\
+2\h & rank & -- \\
+2\s & -- & always \\
+2\nt & 2\s & -- \\
+3\c & 2\c & 3433 \\
+3\d & 2\d & \zoom{4333} \\
+3\h & \zoom{2\h} & \smash{\vdots} \\
+3\s & \smash{\vdots} &
+\end{tabular}\\
+\\
+\end{tabular} \\
+\hline
+\begin{tabular}{c|c}
+\\
+\textbf{10-SHAPE RR} / 1\h,1\s,1\nt & \textbf{4-SHAPE RR} / 2\c, 2\d \\
+\begin{tabular}{lll}
+1 && 4441 / 4450 / 4540 / 5440 (\textbf{4-SHAPE RR})\\
+2 && 4531 / 3451 / 5341\\
+&a& 4531\\
+&b& 3451\\
+&c& \zoom{5341}\\
+3 && 4351\\
+4 && 3541\\
+5 && \zoom{5431}\\
+6 && \smash{\vdots} \quad\quad \textbf{Hearts primary with known \h\ fit}
+\end{tabular} &
+\begin{tabular}{lll}
+1&& 4450 / 4540 / 5440\\
+&a& 4450\\
+&b& 4540\\
+&c& \zoom{5440}\\
+2&& \zoom{4441}\\
+3&& \smash{\vdots}\\
+\\
+\\
+\multicolumn{3}{l}{\textbf{No zoom past} 3\nt\ \textbf{without known fit}}\\
+\end{tabular}
+\end{tabular}
+\end{tabular}
+\end{minipage}
+\caption{Relay Summary}
+\end{figure}
 
 \chapter{The 1\h\ and 1\s\ openings}
 
@@ -195,8 +672,8 @@ natural and invitational.
 \begin{figure}
 \begin{center}
 \begin{tabular}{llllllll}
-1\M&2\nt
- &3\c &&&&&minimum without shortness or with a singleton \OM,\\
+1\M&2\nt\\
+&&3\c &&&&&minimum without shortness or with a singleton \OM,\\
 &&    &&&&&\quad or a maximum without shortness not interested in 3\nt,\\
 &&    &&&&&\quad or any hand with a void\\
 &&    &3\d &&&&Responder wants to go to game opposite any hand\\
@@ -226,23 +703,140 @@ natural and invitational.
 &&4\h &&&&&maximum, 5-card \OM\ suit or (74)11\\
 \end{tabular}
 \end{center}
-\caption{\label{fig:1M-2NT}The 2\nt\ gadget.}
+\caption{\label{fig:1M-2NT}1M--2\nt}
 \end{figure}
 
-\chapter{The weak 1\nt}
+\chapter{The weak 1\nt opening}
 
 When nonvulnerable, 10--12 \bal\ in \fs, 10--14 in 3rd and 13--14 in
 4th.  When vulnerable, 13--15 \bal\ in \fs.  (In \tf\ we play a strong
 \nt, 15--17, with different systems.)
 
-\section{Unpassed responder}
-2\h/2\s\ to play, \dots.
-
 \section{Passed responder}
 We have 0--9 opposite at most 14 so there is no game.  Everything is
 to play.
 
-\chapter{The strong 1\nt}
+\section{Unpassed responder}
+
+\begin{figure}[ht]
+\begin{tabular}{lllll}
+1\nt\\
+&2\c &&& Stayman.\\
+&   &2\d && No 4 card \h\ or \s.\\
+&   &   &2\h & Weak, 4+4+ in majors.\\
+&   &   &2\s &Invite+, 5\s, 4\h.\\
+&   &   &2\nt &Invite.\\
+&   &   &3m &Invite with long minor.\\
+&   &   &3M & \gf, 4M, short OM.\\
+&   &   &3\nt &To play.\\
+&   &   &4m &5+5+ in majors, splinter.\\
+&   &   &4M &To play.\\
+&   &2\h && 4\h.\\
+&   &   &2\s & Invite w/o 4\s OR slam try in \h. (2\nt = min)\\
+&   &   &2\nt & Invite w/ 4\s. \\
+&   &   &3m & Invite with long minor. \\
+&   &   &3\h & Invite with 4\h. \\
+&   &   &3\s & Slam try with 4\s.\\
+&   &   &3\nt & To play, with 4\s.\\
+&   &   &4m& Splinter for \h.\\
+&   &   &4M& To play.\\
+&   &2\s && 4\s, not 4\h.\\
+&   &   &2\nt & Invite.\\
+&   &   &3m & Invite with long minor.\\
+&   &   &3\h & Slam try with spade fit.\\
+&   &   &3\s & Invite with 4\s.\\
+&   &   &3\nt& To play.\\
+&   &   &4m& Splinter.\\
+&   &   &4M& To play.\\
+&2\d&&& Hitchhiker.\\
+&   &2\h&& 2\h.\\
+&   &   &2\s& Invite+, 5\h, 4\s.\\
+&   &   &2\nt& Invite, 5\h.\\
+&   &   &3m& \gf, natural.\\
+&   &   &3\h& Invite, 6\h.\\
+&   &   &3\s& Invite, 5\s.\\
+&   &   &3\nt& To play.\\
+&   &   &4m& \s\ fit, control.\\
+&   &   &4M& To play.\\
+&   &2\s&& 2\s.\\
+&   &   &2\nt& Invite, 5\s.\\
+&   &   &3m& \gf, natural.\\
+&   &   &3\h& Invite, 5\h.\\
+&   &   &3\s& Invite, 6\s.\\
+&   &   &3\nt& To play.\\
+&   &   &4m& \h\ fit, control.\\
+&   &   &4M& To play.\\
+&   &2\nt&& 3+3+ majors and min, or 44 majors and max.\\
+&   &   &3m& Sets corresponding major, frivolous on.\\
+&   &   &3M& Invite, 5 card M.\\
+&   &   &4M& To play.\\
+&   &3\c&& max, 4+\c, 2\d.\\
+&   &   &\hbox to 0pt{3M,4\c}& sets trump.\\
+&   &   &4\d & 1430 for \c.\\
+&   &3\d&& max, 4+\d, 2\c.\\
+&   &   &\hbox to 0pt{3M,4\d}& sets trump.\\
+&   &   &4\c &1430 for \d.\\
+&   &3\h&& max, 3433.\\
+&   &3\s&& max, 4333.\\
+&   &3\nt&& max, 33(43).\\
+\end{tabular}
+\caption{Stayman and Hitchhiker}
+\end{figure}
+\begin{figure}
+\begin{tabular}{llllllll}
+&2M&&&&&& To play. (2M+1 superaccept)\\
+&2\nt&&&&&& Transfer to clubs.\\
+&   &3\c&\hbox{3\d, 3M}&&&& 6\c, 4 other suit, slammish.\\
+&3\c&&&&&& Transfer to diamonds.\\
+&   &3\d&3M&&&& 6\d, 4M, slammish.\\
+&3\d&&&&&& 16-19\hcp, 5-7 \ak, 44(50) or (43)(60).  (opposite 13-14 and 13-15 adjust)\\
+&   &3\h&&&&& relay.\\
+&   &   &3\s&&&& clubs.\\
+&   &   &   &3\nt&&& To play. (4\c=7\ak)\\
+&   &   &   &4\c &&& Shape ask.\\
+&   &   &   &   &4\d && 4405.\\
+&   &   &   &   &   &4M & To play.\\
+&   &   &   &   &   &4\nt & Control ask.  Zoom to spiral scan.\\
+&   &   &   &   &4\h && 3406, 5-6 \ak.\\
+&   &   &   &   &   &4\s & Control ask.  Zoom to spiral scan.\\
+&   &   &   &   &4\s && 4306, 5-6 \ak.\\
+&   &   &   &   &   &4\nt & Control ask.  Zoom to spiral scan.\\
+&   &   &   &   &4\nt&& 3406, 7\ak. (5\c = to play, 5\d=spiral scan)\\
+&   &   &   &   &5\c&& 4306, 7\ak, no Q\c. (5\d=spiral scan)\\
+&   &   &   &4\d&&& Control ask. (4\h=5, 4\s=6, 4\nt=7 \& no Q\c\ldots)\\
+&   &   &   &\hbox to 0pt{4M, 5\c}&&& To play.\\
+&   &   &3\nt&&&& 4450, 5-6\ak.\\
+&   &   &   &4\c &&& Shape ask.\\
+&   &   &   &   &4\d && 4450.\\
+&   &   &   &   &   &4M & To play.\\
+&   &   &   &   &   &4\nt & Control ask.  Zoom to spiral scan.\\
+&   &   &   &   &4\h && 3460, 5 \ak.\\
+&   &   &   &   &   &4\s & Spiral scan.\\
+&   &   &   &   &4\s && 4360, 5 \ak.\\
+&   &   &   &   &   &4\nt & Spiral scan.\\
+&   &   &   &   &4\nt&& 3460, 6\ak. (5\c = spiral scan, 5\d=to play)\\
+&   &   &   &   &5\c&& 4360, 6\ak, no Q\d. (5\h=spiral scan)\\
+&   &   &   &   &5\d&& 4360, 6\ak, Q\d. (5\h=spiral scan)\\
+&   &   &   &4\d&&& Control ask. (4\h=5, 4\s=6 no Q\d\ldots)\\
+&   &   &   &\hbox to 0pt{4M, 5\d}&&& To play.\\
+&   &   &4\c&&&& 4450, 7\ak\ OR (43)60.\\
+&   &   &   &4\d&&& Shape ask.\\
+&   &   &   &   &4\h&& 3460.\\
+&   &   &   &   &   &4\s & Control ask.  Zoom to spiral scan.\\
+&   &   &   &   &4\s&& 4360.\\
+&   &   &   &   &   &4\nt & Control ask.  Zoom to spiral scan.\\
+&   &   &   &   &4\nt&& 4450, no Q\d. (5\c = spiral scan, 5\d=to play)\\
+&   &   &   &   &5\c&& 4450, Q\d. (5\h= spiral scan)\\
+&   &   &   &\hbox to 0pt{4M, 5\d} &&& To play.\\
+&3M &&&&&& 3M, 1OM, (54) minors, \gf.\\
+&3\nt&&&&&& To play.\\
+&4m&&&&&& 6+ corresponding major, slammish.\\
+&4M&&&&&& To play.\\
+\end{tabular}
+\caption{Higher bids over 1\nt}
+\end{figure}
+
+\chapter{The strong 1\nt opening}
 1\nt\ opening showing 15--17 \bal\ in \tf\ when vulnerable, or
 1\c--1\d--1\nt\ or 1\c--1\d--1\h--1\s--1\nt.
 
