@@ -54,7 +54,8 @@ runRelay (Relay r) h = runRWS r h $ RelayState { relayAsk = Bid 1c, extraSteps =
 
 skipSignoff :: Bid -> Bid
 skipSignoff (Bid 3 NT) = Bid 4c
-skipSignoff (Bid 4 (Suit D)) = Bid 4h
+-- We now play 4D as the relay when the previous response was 4C.
+-- skipSignoff (Bid 4 (Suit D)) = Bid 4h
 skipSignoff x = x
 
 bid :: Int -> Strain -> Relay ()
