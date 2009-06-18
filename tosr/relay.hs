@@ -212,7 +212,7 @@ normalRangeControls = do
   hand <- ask
   let strong = hcp hand >= 13 && ak hand >= 3 || ak hand >= 6 -- 3 Aces counts as strong
   if not strong
-    then steps 0 >> steps (ak hand - 2)
+    then steps 0 >> (if ak hand < 5 then steps (ak hand - 2) else zoomSteps 3)
     else zoomSteps 1 >> steps (ak hand - 3)
 
 spiralScan :: Hand -> [Bool]
