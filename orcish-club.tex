@@ -482,17 +482,37 @@ There is no distinction between minimum and maximum for a responder's hand: afte
 
 \section{Interference Over 1\c}
 
+\subsection{Low-level auctions}
+
+If they bid 1\h\ over our 1\c\ we ignore it---\p\ replaces 1\d\ and
+\x\ replaces 1\h\ (by either player).
+
+If they double or bid 1\d, responder may:
+\begin{itemize}
+\item Make the same relay response they would otherwise, game forcing
+  as usual.  We ignore the \x/1\d.
+\item Bid 1\d\ or double it, showing the weakest range (0--6).  Even
+  though this is not the normal range for a 1\d\ bid, we pretend the
+  auction has gone 1\c--1\d\ as far as our systems are concerned.
+  1\h\ now shows 21\+, over which 1\s\ is 0--3.  Other rebids show
+  16--20.
+\item Pass (with \c\ length) or redouble (for takeout) over a double,
+  or pass 1\d.  This shows a semi-positive.  We bid as though they
+  opened 1\c/1\d: double/redouble by opener is takeout, the rest
+  natural.
+\end{itemize}
+
 \begin{figure}[p]
 \begin{tabular}{cccl}
-1\c & (x) & -- & 7-8\hcp, not interested in 1\c xx\\
-1\c & (x) & xx & 7-8\hcp, 4\+ \c, interested in penalizing?\\
+1\c & (x) & -- & 7-8\hcp, some \c\ length\\
+1\c & (x) & xx & 7-8\hcp, takeout of \c\\
 1\c & (x) & 1\d & 0-6\hcp\\
 1\c & (x) & 1\h + & normal relays\\
 1\c & (1\d) & -- & semi-positive, non-\gf\\
 1\c & (1\d) & x & 0-6\hcp \\
 1\c & (1\d) & 1\h + & normal relays\\
-1\c & (1\h) & -- & Non-\gf \\
-1\c & (1\h) & x & Would have bid 1\h\\
+1\c & (1\h) & -- & Non-\gf\ (opener's \x\ = 1\h, strong; others as over 1\c--1\h)\\
+1\c & (1\h) & x & Would have bid 1\h\ (normal relays)\\
 1\c & (1\h) & 1\s + & normal relays\\
 1\c & (1\s,2\c,2\d) & -- & 0-5\hcp\ or penalty pass or 6-8\hcp but not able to double.\\
 1\c & (1\s,2\c,2\d) & x & 6-8 \hcp, 3-4 cards in opponents suit; flattish with penalty interest or \gf without stopper.\\
