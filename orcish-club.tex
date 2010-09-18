@@ -879,41 +879,58 @@ After 1\d--1\h--1\nt--2\s--2\nt:
 We open 1\h\ or 1\s\ with a 5-card major and 10--14 \hcp\ in \fs,
 12--16 \hcp\ in \tf\ (though we could occasionally have fewer than
 12).  We open 1\h\ or 1\s\ even with a 6-card minor if the hand is
-minimum.  We normally do not open 1\nt\ with a 5-card major.
+minimum.  We normally do not open 1\nt\ with a 5-card major, but may
+if the hand is especially notrump-oriented, with a poor suit and
+values in the side suits.
 
-Our non-jump responses are fairly similar to standard 2/1.  1\s\ over
-1\h\ is natural and forcing with 4\+\ spades, and 1\nt\ is a forcing
-notrump.  However, neither of these bids promises any values.  With a
-non-invitational 3-card raise, we make a delayed raise through 1\nt.
-In repsonse to 1\h\ with a hand of invitational strength, exactly 4
-spades, and no heart fit, we start with the forcing notrump and then
-bid 2\s\ on the next round; we do not use the common treatment of this
-sequence as a strong raise of opener's second suit.  We also bid a
-forcing 1\nt\ over 1\s\ with 1444 shape.  A jump into a new suit on
-the second round (except 1\s--1\nt--2\d--4\c, which passes 3\nt\ with
-no known major suit fit) reveals this hand type; the auction
-1\s--1\nt--2\s--3\nt\ is also possible.
+Our raises include
+\begin{itemize}
+\item 2\M, a ``very constructive'' raise: roughly 11--13 support
+  points and 3-card support (maybe 4-card support in a balanced hand);
+\item 2\nt\ as a 4\+-card limit raise or a 3\+-card slammish raise
+  (though other sequences are available with the latter);
+\item 3\M, a mixed raise: 4-card support (rarely 3 or 5) and
+  constructive but less than limit values;
+\item 3\M+1, an undisclosed light splinter, enough to make slam
+  opposite a well-fitting maximum opener;
+\item 3\nt\ (when \M=\h), 4\c\ and 4\d, strong splinters, enough to
+  make slam opposite a well-fitting minimum opener (when \M=\s, both
+  club and heart splinters go through 4\c);
+\item 4\M, to play, but might be either a classic preemptive raise to
+  4 or a high-card raise without slam interest or anything in-between.
+\end{itemize}
+Hands with 3\+-card support unsuitable for the above raises go through
+a forcing 1\nt\ and correct opener's rebid to 2\M.  This includes
+hands with 3-card support and less than invitational values or ugly
+4-card raises that do not want to commit to the 3-level.  Note that
+1\s--4\h\ is to play (as is 1\h--4\s).
 
-A 2/1 bid is forcing to game and is almost always a 5-card suit: the
-only common exception is (4432) shape with 2 cards in opener's major.
-A rebid by opener above 2 of the opened major shows extra values.
+We play 2/1 \gf, with 2\c\ clubs or balanced (may have 3-card support,
+or 4 \s s over 1\h) and 2\d\ and 2\h\ guaranteeing 5-card suits.  For
+continuations, see section \ref{2over1}.  Game-forcing 1444 hands in
+response to a 1\s\ opening go through a forcing 1\nt\ and bid game or
+jump in a new suit on the next round.
 
-Our raise structure is less standard.  We play a raise to 2 as an
-\emph{invitational} 3-card raise, about 11--13 support points.  A jump
-to 3 is a mixed raise, about 8--10 points with 4-card support; opener
-should usually not bid game without extra shape.  A jump to 4 is a
-two-way bid, showing either a hand with a fit and game values that
-sees little chance of slam, or a hand with enough shape to want to
-play in game even without values (5-card support and a singleton or
-4-card support and a void).  We have two ranges of splinters, shown in
-Figure \ref{fig:1M-splinters}.  This leaves the invitational 4-card
-raises and slammish 3-card raises.  We handle both through the
-2\nt\ gadget, described in Figure \ref{fig:1M-2NT}.
+1\s\ over 1\h\ is natural and forcing with 4\+\ spades, and 1\nt\ is a
+forcing notrump.  However, neither of these bids promises any values.
+Moreover there are many hands with exactly 4 spades which start with a
+bid other than 1\s\ (see section \ref{1h-1s} for details) so in fact
+1\s\ is quite often a 5-card suit.  As previously mentioned, the
+forcing 1\nt\ contains weak raises and \gf\ 1444 hands over 1\s, as
+well as nonfitting weak-to-invitational hands except for one-suited
+invites.  Single jump shifts to the 3-level are invitational while
+1\h--2\s\ is weak; the sequence 1\h--1\s--2\x--2\s\ is invitational
+with a 6-card suit.
 
-The jump shift 1\h--2\s\ is weak; jump shifts to the three level are
-natural and invitational.
+XXX Passed hand bidding?  Fit jumps?
 
-\begin{figure}
+\section{Artificial raise sequences}
+
+We have two ranges of splinters, shown in Figure
+\ref{fig:1M-splinters}.  With an extremely strong hand, responder may
+do better to eschew a splinter and instead start with 2\nt\ or 2\c.
+
+\begin{figure}[ht]
 \begin{center}
 \begin{tabular}{lllll}
 1\h
@@ -934,7 +951,15 @@ natural and invitational.
 \caption{\label{fig:1M-splinters}Splinter raises of a 1\h\ or 1\s\ opening.}
 \end{figure}
 
-\begin{figure}
+Our 2\nt\ gadget, described in Figure \ref{fig:1M-2NT}, handles both
+invitational 4-card raises and slammish 3\+-card raises.  With the
+latter hand type, responder may also begin with 2\c\ if balanced.
+2\c\ is often preferable if a side 4-4 fit may be better or if a
+cue-bidding auction is necessary, while 2\nt\ allows responder to
+determine opener's strength and shortness (if any).  It is rather more
+difficult to stop in 3\nt\ after choosing 2\nt.
+
+\begin{figure}[ht]
 \begin{center}
 \begin{tabular}{llllllll}
 1\M&2\nt\\
@@ -970,6 +995,56 @@ natural and invitational.
 \end{center}
 \caption{\label{fig:1M-2NT}1M--2\nt}
 \end{figure}
+
+After 1\M--2\M, we play two-way game tries.  The next step asks for
+the lowest long-suit game try responder would accept; a rebid by
+opener then shows a long-suit try in that suit.  The three other bids
+below 3\M\ show short-suit game tries (2\nt\ serving as a short-suit
+game try in \s\ when \M=\h).  The reraise to 3\M\ is a general
+balanced game try, 3\nt\ is natural and nonforcing, and jump shifts
+are natural slam tries with extreme two-suiters.
+
+\section{1\h--1\s}\label{1h-1s}
+
+\section{Forcing 1NT}
+
+\section{2/1 GF}\label{2over1}
+
+As previously mentioned 2\d\ and 2\h\ (over 1\s) guarantee 5\+-card
+suits while 2\c\ shows either 5\+ clubs or a balanced hand.  The
+continuations after 2\c\ are mildly artificial, and we describe them
+last.
+
+Opener's rebid is natural, with 2\M\ as a ``catchall''.  Bids above
+2\M\ show extras, \emph{except} raising 2\h\ to 3\h, which may be done
+on any 3-card fit.  (We have frivolous 3\nt\ available to sort out
+opener's range.)  Raising 2\d\ to 3\d\ shows extras although these may
+be in the form of extra shape (e.g., any 5-card support).  A jump
+shift is a splinter raise of responder's suit, while a non-jump new
+suit above 2\M\ shows a 5-card suit and extras.  Jumping to 3\M\ shows
+a maximum with a strong suit (at most one loser opposite a singleton).
+2\nt\ is a balanced maximum, usually with stoppers in the unbid suits.
+2\h\ over 2\d\ just shows 4\+ hearts and 2\M\ (probably the most
+common rebid) handles the remaining hands.
+
+On the second round responder may
+\begin{itemize}
+\item raise (one of) opener's suit(s) naturally (XXX even at the two
+  level---does this really need to show a fit?);
+\item jump raise (one of) opener's suit(s), showing a picture raise
+  (no control in a side suit);
+\item jump shift, as a splinter raise for opener's most recent suit
+  (usually showing an 8-card fit);
+\item bid 2\nt\ if available, tending to deny extra length in any bid
+  suits and to show stoppers in the unbid suit(s), with either at most
+  17 or more than 20 \hcp;
+\item jump to 3\nt, showing the above hand types with about 18--20 \hcp;
+\item bid a third suit (semi)naturally, if two suits have been bid;
+\item bid the fourth suit artificially, if three suits have been bid
+  naturally, typically lacking a stopper in the fourth suit, but
+  possibly looking for a fit there;
+\end{itemize}
+
 
 \chapter{The 1\nt\ opening}
 
